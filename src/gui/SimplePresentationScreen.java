@@ -47,25 +47,25 @@ public class SimplePresentationScreen extends JFrame {
 		tabbedPane.addTab("InformaciÃ³n del alumno", null, tabInformation, "Muestra la informaciÃ³n declarada por el alumno");
 		tabInformation.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("LU:");
-		lblNewLabel.setBounds(10, 22, 46, 14);
-		tabInformation.add(lblNewLabel);
+		JLabel labelLU = new JLabel("LU:");
+		labelLU.setBounds(10, 22, 46, 14);
+		tabInformation.add(labelLU);
 		
-		JLabel lblNewLabel_1 = new JLabel("Apellido: ");
-		lblNewLabel_1.setBounds(10, 47, 46, 14);
-		tabInformation.add(lblNewLabel_1);
+		JLabel labelApellido = new JLabel("Apellido: ");
+		labelApellido.setBounds(10, 47, 46, 14);
+		tabInformation.add(labelApellido);
 		
-		JLabel lblNewLabel_2 = new JLabel("Nombre:");
-		lblNewLabel_2.setBounds(10, 72, 46, 14);
-		tabInformation.add(lblNewLabel_2);
+		JLabel labelNombre = new JLabel("Nombre:");
+		labelNombre.setBounds(10, 72, 46, 14);
+		tabInformation.add(labelNombre);
 		
-		JLabel lblNewLabel_3 = new JLabel("Email:");
-		lblNewLabel_3.setBounds(10, 97, 46, 14);
-		tabInformation.add(lblNewLabel_3);
+		JLabel labelEmail = new JLabel("Email:");
+		labelEmail.setBounds(10, 97, 46, 14);
+		tabInformation.add(labelEmail);
 		
-		JLabel lblNewLabel_4 = new JLabel("Github URL:");
-		lblNewLabel_4.setBounds(10, 122, 70, 14);
-		tabInformation.add(lblNewLabel_4);
+		JLabel labelGithub = new JLabel("Github URL:");
+		labelGithub.setBounds(10, 122, 70, 14);
+		tabInformation.add(labelGithub);
 		
 		JTextPane studentID = new JTextPane();
 		studentID .setText(String.valueOf(studentData.getId()));
