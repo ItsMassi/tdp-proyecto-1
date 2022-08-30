@@ -13,6 +13,8 @@ import javax.swing.border.EmptyBorder;
 import entities.Student;
 import javax.swing.JTabbedPane;
 import javax.swing.*;
+import java.awt.Color;
+import java.awt.SystemColor;
 
 @SuppressWarnings("serial")
 public class SimplePresentationScreen extends JFrame {
@@ -46,23 +48,23 @@ public class SimplePresentationScreen extends JFrame {
 		tabbedPane.setBounds(5, 5, 430, 174);
 		tabInformation = new JPanel();
 		tabInformation.setPreferredSize(new Dimension(425, 275));
-		tabbedPane.addTab("InformaciÃ³n del alumno", null, tabInformation, "Muestra la informaciÃ³n declarada por el alumno");
+		tabbedPane.addTab("Informacion del alumno", null, tabInformation, "Muestra la informacion declarada por el alumno");
 		tabInformation.setLayout(null);
 		
 		JLabel labelLU = new JLabel("LU:");
-		labelLU.setBounds(10, 22, 46, 14);
+		labelLU.setBounds(10, 22, 70, 14);
 		tabInformation.add(labelLU);
 		
 		JLabel labelApellido = new JLabel("Apellido: ");
-		labelApellido.setBounds(10, 47, 46, 14);
+		labelApellido.setBounds(10, 47, 70, 14);
 		tabInformation.add(labelApellido);
 		
 		JLabel labelNombre = new JLabel("Nombre:");
-		labelNombre.setBounds(10, 72, 46, 14);
+		labelNombre.setBounds(10, 72, 70, 14);
 		tabInformation.add(labelNombre);
 		
 		JLabel labelEmail = new JLabel("Email:");
-		labelEmail.setBounds(10, 97, 46, 14);
+		labelEmail.setBounds(10, 97, 70, 14);
 		tabInformation.add(labelEmail);
 		
 		JLabel labelGithub = new JLabel("Github URL:");
@@ -104,6 +106,7 @@ public class SimplePresentationScreen extends JFrame {
 		System.out.println(dtf.format(now));  
 		
 		JTextPane curretHour = new JTextPane();
+		curretHour.setBackground(SystemColor.menu);
 		curretHour.setText("Esta ventana fue generada en esta fecha: "+dtf.format(now));
 		curretHour.setBounds(5, 191, 430, 20);
 		contentPane.add(curretHour);
