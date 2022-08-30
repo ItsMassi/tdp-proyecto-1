@@ -28,8 +28,8 @@ public class SimplePresentationScreen extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
-		setIconImage(new ImageIcon("C:\\Users\\massi\\Documents\\GitHub\\tdp-proyecto-1\\src\\images\\tdp.png").getImage());
-		setTitle("TdP-DCIC-UNS 2021 :: Pantalla de presentaciÃ³n");
+		setIconImage(new ImageIcon(getClass().getResource("/images/tdp.png")).getImage());
+		setTitle("TdP-DCIC-UNS 2021 :: Pantalla de presentacion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(new Dimension(615, 250));
 		setContentPane(contentPane);
@@ -93,7 +93,7 @@ public class SimplePresentationScreen extends JFrame {
 		tabInformation.add(github);
 		contentPane.add(tabbedPane);
 		
-		JLabel lblNewLabel_5 = new JLabel(new ImageIcon(studentData.getPathPhoto()));
+		JLabel lblNewLabel_5 = new JLabel(new ImageIcon(getClass().getResource(studentData.getPathPhoto())));
 		lblNewLabel_5.setBounds(445, 26, 144, 174);
 		contentPane.add(lblNewLabel_5);
 	}
