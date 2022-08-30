@@ -2,6 +2,8 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -41,7 +43,7 @@ public class SimplePresentationScreen extends JFrame {
 		contentPane.setLayout(null);
 		// Tabbed Pane to student personal data
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(5, 5, 430, 201);
+		tabbedPane.setBounds(5, 5, 430, 174);
 		tabInformation = new JPanel();
 		tabInformation.setPreferredSize(new Dimension(425, 275));
 		tabbedPane.addTab("InformaciÃ³n del alumno", null, tabInformation, "Muestra la informaciÃ³n declarada por el alumno");
@@ -96,5 +98,14 @@ public class SimplePresentationScreen extends JFrame {
 		JLabel lblNewLabel_5 = new JLabel(new ImageIcon(getClass().getResource(studentData.getPathPhoto())));
 		lblNewLabel_5.setBounds(445, 26, 144, 174);
 		contentPane.add(lblNewLabel_5);
+		
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+		LocalDateTime now = LocalDateTime.now();  
+		System.out.println(dtf.format(now));  
+		
+		JTextPane curretHour = new JTextPane();
+		curretHour.setText("Esta ventana fue generada en esta fecha: "+dtf.format(now));
+		curretHour.setBounds(5, 191, 430, 20);
+		contentPane.add(curretHour);
 	}
 }
